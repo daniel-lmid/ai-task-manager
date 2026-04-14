@@ -1,0 +1,15 @@
+# backend
+backend/build/
+backend/.gradle/
+
+# frontend
+frontend/node_modules/
+frontend/dist/
+
+# general
+node_modules/
+dist/
+build/
+
+# env
+.env
