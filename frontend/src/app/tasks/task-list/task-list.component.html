@@ -1,0 +1,61 @@
+<div class="task-list">
+  <div class="task-columns">
+    <!-- ACTIVE TASKS -->
+    <div class="column">
+      <h3>Active Tasks</h3>
+
+      <div *ngFor="let task of tasks">
+        <div *ngIf="!task.completed" class="task-card">
+
+          <!-- NORMAL VIEW -->
+          <div *ngIf="editingId !== task.id" class="task-row">
+            <div class="task-content">
+              <div class="task-title">{{ task.title }}</div>
+              <div class="task-desc">{{ task.description }}</div>
+            </div>
+
+            <div class="task-actions">
+              <button class="btn complete" (click)="onToggle(task.id)">Complete</button>
+              <button class="btn edit" (click)="startEdit(task)">Edit</button>
+              <button class="btn delete" (click)="onDelete(task.id)">Delete</button>
+            </div>
+          </div>
+
+          <!-- EDIT MODE -->
+          <div *ngIf="editingId === task.id" class="task-row">
+            <div class="task-content">
+              <input [(ngModel)]="editTitle" />
+              <textarea [(ngModel)]="editDescription"></textarea>
+            </div>
+
+            <div class="task-actions">
+              <button class="btn save" (click)="saveEdit(task)">Save</button>
+              <button class="btn cancel" (click)="cancelEdit()">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPLETED -->
+    <div class="column">
+      <h3>Completed</h3>
+
+      <div *ngFor="let task of tasks">
+        <div *ngIf="task.completed" class="task-card completed">
+
+          <div class="task-row">
+            <div class="task-content">
+              <div class="task-title strike">{{ task.title }}</div>
+              <div class="task-desc strike">{{ task.description }}</div>
+            </div>
+
+            <div class="task-actions">
+              <button class="btn undo" (click)="onToggle(task.id)">Undo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

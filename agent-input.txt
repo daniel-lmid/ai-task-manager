@@ -1,0 +1,7 @@
+mode: combined
+
+prompt:
+Rewrite task list HTML and SCSS component ONLY. Do NOT modify TypeScript.
+
+spec:
+specs/fix-task-list-frontend.md

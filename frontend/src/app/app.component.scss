@@ -1,0 +1,63 @@
+.app {
+  min-height: 100vh;
+  background: #f6f7fb;
+  color: #111827;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+  }
+
+  &__brand {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  &__button {
+    padding: 0.5rem 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  &__main {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__grid {
+  gap: 24px;
+  display: flex;
+  flex-direction: row;
+}
+
+  &__status {
+    margin: 1rem 0 0;
+    color: #6b7280;
+  }
+
+  &__error {
+    margin: 0.5rem 0 0;
+    color: #b91c1c;
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  .app__grid {
+    grid-template-columns: 1fr;
+  }
+}
+

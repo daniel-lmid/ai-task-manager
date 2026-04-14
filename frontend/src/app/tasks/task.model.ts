@@ -1,0 +1,13 @@
+export type Task = {
+  id: number;
+  title: string;
+  description: string | null;
+  completed: boolean;
+  // createdAt: string;  TODO
+};
+
+export type CreateTaskRequest = {
+  title: string;
+  description?: string | null;
+};
+

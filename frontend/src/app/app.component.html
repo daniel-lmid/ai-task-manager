@@ -1,0 +1,31 @@
+<div class="app">
+  <header class="app__header">
+    <div class="app__brand">AI Task Manager</div>
+    <button class="app__button" type="button" (click)="refresh()" [disabled]="loading">
+      Refresh
+    </button>
+  </header>
+
+  <main class="app__main">
+    <div class="app__grid">
+
+      <!-- CREATE / EDIT FORM -->
+      <app-task-create
+        (save)="onSave($event)"
+        [task]="selectedTask"
+      ></app-task-create>
+
+      <!-- TASK LIST -->
+      <app-task-list
+        [tasks]="tasks"
+        (delete)="onDelete($event)"
+        (toggleComplete)="onToggleComplete($event)"
+        (update)="onUpdate($event)"
+      ></app-task-list>
+
+    </div>
+
+    <p class="app__status" *ngIf="loading">Loading…</p>
+    <p class="app__error" *ngIf="error">{{ error }}</p>
+  </main>
+</div>

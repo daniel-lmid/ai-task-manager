@@ -1,0 +1,62 @@
+.task-create {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  margin: 60px 0 0 0;
+  width: 350px;
+  
+  &__title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  &__form {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  &__field {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  &__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font: inherit;
+  }
+
+  &__error {
+    font-size: 0.875rem;
+    color: #b91c1c;
+  }
+
+  &__button {
+    justify-self: start;
+    padding: 0.5rem 0.875rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: #111827;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  &__button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+

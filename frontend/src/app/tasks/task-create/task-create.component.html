@@ -1,0 +1,22 @@
+<section class="task-create">
+  <h2 class="task-create__title">Create task</h2>
+
+  <form class="task-create__form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label class="task-create__field">
+      <span class="task-create__label">Title</span>
+      <input class="task-create__input" type="text" formControlName="title" />
+      <span class="task-create__error" *ngIf="form.controls.title.touched && form.controls.title.invalid">
+        Title is required.
+      </span>
+    </label>
+
+    <label class="task-create__field">
+      <span class="task-create__label">Description</span>
+      <textarea class="task-create__textarea" rows="3" formControlName="description"></textarea>
+    </label>
+
+    <button class="task-create__button" type="submit">
+      {{ task ? 'Update Task' : 'Save' }}
+    </button>
+  </form>
+</section>

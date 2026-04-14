@@ -1,0 +1,168 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* =========================
+   TWO COLUMN LAYOUT
+========================= */
+.task-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.column{    
+  width: 400px;
+}
+
+/* SECTION */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* =========================
+   CARD
+========================= */
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border: 1px solid #e5e7eb; /* softer */
+  border-radius: 8px;
+  background: #ffffff;
+
+  transition: box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.completed {
+  background: #f9fafb;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-right: 12px;
+}
+
+.task-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.task-description {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* =========================
+   ACTIONS (RIGHT SIDE LOCK)
+========================= */
+.task-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  width: 80px; /* 🔥 equal width */
+  border-radius: 6px;
+  padding: 6px 0;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+/* =========================
+   SOFT COLOR PALETTE
+========================= */
+.complete {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.edit {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.delete {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.undo {
+  background: #fef3c7;
+  color: #78350f;
+}
+
+/* EDIT MODE BUTTONS */
+.save {
+  background: #dbeafe;
+  color: #1e3a8a;
+}
+
+.cancel {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* HOVER */
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   EDIT MODE INPUTS
+========================= */
+input,
+textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+textarea {
+  resize: vertical;
+}
+
